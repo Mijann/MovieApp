@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">MovieApp</string>
+    <string name="app_name">iMovie</string>
+    <string name="back">Back</string>
+    <string name="book">Book</string>
+    <string-array name="sort_by_selection">
+        <item>Release Date</item>
+        <item>Alphabetical</item>
+        <item>Rating</item>
+    </string-array>
 </resources>
