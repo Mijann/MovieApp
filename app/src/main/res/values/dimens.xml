@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingHorizontal">18dip</dimen>
+    <dimen name="paddingVertical">20dip</dimen>
+    <dimen name="fontXLarge">23sp</dimen>
+    <dimen name="fontLarge">20sp</dimen>
+    <dimen name="fontNormal">17sp</dimen>
+    <dimen name="fontSmall">15sp</dimen>
+    <dimen name="marginTop">8dip</dimen>
+    <dimen name="margin_large">15dip</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_md">8dp</dimen>
+</resources>

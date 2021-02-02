@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="500dip"
+            app:cardCornerRadius="5dp"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:background="@drawable/ic_default_image"
+                    android:id="@+id/image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY" />
+
+                <com.mijandev.com.movieapp.core.ui.MyTextView_Montserrat_Medium
+                    android:layout_width="wrap_content"
+                    android:paddingHorizontal="@dimen/paddingHorizontal"
+                    android:id="@+id/title_text_view"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:paddingTop="@dimen/paddingVertical"
+                    android:textSize="@dimen/fontLarge"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorJetBlack"
+                    android:layout_height="wrap_content"/>
+
+                <com.mijandev.com.movieapp.core.ui.MyTextView_Montserrat_Regular
+                    android:layout_width="wrap_content"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="@dimen/paddingHorizontal"
+                    android:paddingBottom="@dimen/paddingVertical"
+                    android:textSize="@dimen/fontNormal"
+                    android:drawableLeft="@drawable/ic_baseline_arrow_drop_up_24"
+                    android:drawableTint="@color/colorPink"
+                    android:id="@+id/popularity_text_view"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPink"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

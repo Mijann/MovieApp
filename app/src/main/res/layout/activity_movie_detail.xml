@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MovieDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/movie_detail_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/ic_default_image"
+                        android:id="@+id/image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dip"
+                        android:scaleType="fitXY"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/paddingHorizontal"
+                        android:paddingTop="@dimen/paddingVertical"
+                        app:layout_constraintTop_toBottomOf="@+id/image_view">
+
+
+                        <com.mijandev.com.movieapp.core.ui.MyTextView_Montserrat_SemiBold
+                            android:id="@+id/title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorJetBlack"
+                            android:textSize="@dimen/fontLarge" />
+
+                        <com.mijandev.com.movieapp.core.ui.MyTextView_Montserrat_Regular
+                            android:id="@+id/language_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_small"
+                            android:background="@drawable/rounded_corner_square_yellow"
+                            android:paddingHorizontal="@dimen/padding_md"
+                            android:paddingVertical="@dimen/padding_small"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/fontSmall" />
+
+                    </LinearLayout>
+
+
+                    <co.lujun.androidtagview.TagContainerLayout
+                        android:id="@+id/genres_tag_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="10dp"
+                        app:container_background_color="@android:color/transparent"
+                        app:container_border_color="@android:color/transparent"
+                        app:container_enable_drag="false"
+                        app:horizontal_interval="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+                        app:tag_background_color="@color/colorPink"
+                        app:tag_clickable="true"
+                        app:tag_text_color="@android:color/white"
+                        app:tag_theme="none"
+                        app:vertical_interval="10dp" />
+
+                    <com.mijandev.com.movieapp.core.ui.MyTextView_Montserrat_Medium
+                        android:id="@+id/duration_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_timer_24"
+                        android:drawablePadding="@dimen/paddingHorizontal"
+                        android:drawableTint="@color/colorJetBlack"
+                        android:paddingHorizontal="@dimen/paddingHorizontal"
+                        android:paddingBottom="@dimen/paddingVertical"
+                        android:textColor="@color/colorJetBlack"
+                        android:textSize="@dimen/fontNormal"
+                        app:layout_constraintTop_toBottomOf="@+id/genres_tag_view" />
+
+                    <com.mijandev.com.movieapp.core.ui.MyTextView_Montserrat_Regular
+                        android:id="@+id/overview_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/paddingHorizontal"
+                        android:paddingBottom="@dimen/paddingVertical"
+                        android:textColor="@color/colorJetBlack"
+                        android:textSize="@dimen/fontNormal"
+                        app:layout_constraintTop_toBottomOf="@+id/duration_text_view" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:paddingVertical="@dimen/paddingHorizontal"
+                android:paddingHorizontal="@dimen/paddingHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mijandev.com.movieapp.core.ui.MyButton_Montserrat_Regular
+                    android:layout_width="0dp"
+                    android:id="@+id/back_button"
+                    android:layout_weight="1"
+                    android:text="@string/back"
+                    android:background="@drawable/button_dark_selector"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"/>
+
+                <com.mijandev.com.movieapp.core.ui.MyButton_Montserrat_Regular
+                    android:layout_width="0dp"
+                    android:id="@+id/book_button"
+                    android:layout_marginLeft="@dimen/paddingHorizontal"
+                    android:layout_weight="1"
+                    android:text="@string/book"
+                    android:textColor="@color/colorPink"
+                    android:background="@drawable/button_selector"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
